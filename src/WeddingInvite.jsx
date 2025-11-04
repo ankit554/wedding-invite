@@ -29,7 +29,7 @@ export default function WeddingInvite() {
     fetchCount();
 
     // Optional: refresh every 30s for live updates
-    const interval = setInterval(fetchCount, 30000);
+    const interval = setInterval(fetchCount, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -65,9 +65,9 @@ export default function WeddingInvite() {
         body: JSON.stringify(data),
       });
 
-      if (data?.attend == "yes") {
+      if (data?.attend === "yes") {
         alert("We're thrilled you can make it! Bring your dancing shoes!");
-      } else if (data?.attend == "no") {
+      } else if (data?.attend === "no") {
         alert("We'll miss your sparkle but understand. Check out the Gallery & celebrate with us virtually!");
       }else {
         alert("Maybe means 'You need more time to practice your dance moves' right?");
@@ -82,23 +82,6 @@ export default function WeddingInvite() {
     form.reset();
 
   }
-
-  function smoothScrollTo(id, duration = 700) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const start = window.scrollY;
-    const end = el.getBoundingClientRect().top + start;
-    const clockStart = performance.now();
-
-    function step(now) {
-      const t = Math.min(1, (now - clockStart) / duration);
-      const eased = 1 - Math.pow(1 - t, 3); // easeOut cubic
-      window.scrollTo(0, start + (end - start) * eased);
-      if (t < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
 
   // gentle falling petals animation (small decorative effect)
   const [petals] = useState(() => Array.from({ length: 12 }).map((_, i) => ({ id: i })));
@@ -309,7 +292,7 @@ export default function WeddingInvite() {
         <h2 className="section-title text-3xl serif">Venue &amp; Location</h2>
         <div className="divider" />
         <div className="bg-white rounded-3xl shadow-lg mt-6 overflow-hidden p-6 grid md:grid-cols-2 gap-6 items-center">
-          <img src="/images/Venue.JPG" alt="venue" className="rounded-2xl object-cover w-full h-72" />
+          <img src="/images/Venue.jpg" alt="venue" className="rounded-2xl object-cover w-full h-72" />
           <div>
             <h3 className="serif text-2xl font-semibold">Agrasen Resort &amp; Hotel</h3>
             <p className="text-sm text-[#6b6b6b] mt-2">Didwana D.T.O. office, Didwana, Rajasthan 341303</p>
