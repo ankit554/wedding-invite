@@ -278,13 +278,13 @@ export default function WeddingInvite() {
             viewport={{ once: true }}
             className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
           >
-            <motion.article initial={{ opacity:0, y:24 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: .2, ease: 'easeOut' }} className="bg-white p-4 rounded-2xl shadow-md">
+            {/* <motion.article initial={{ opacity:0, y:24 }} whileInView={{ opacity:1, y:0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: .2, ease: 'easeOut' }} className="bg-white p-4 rounded-2xl shadow-md"> */}
               <h4 className="serif text-xl font-semibold text-[#C76D6D] drop-shadow-[0_0_5px_rgba(199,109,109,0.4)] hover-shimmer">Divya Milan — The Royal Wedding Night 💍</h4>
               {/* <h4 className="serif text-xl font-semibold">Shaam-e-Shahi Shagna</h4> */}
               {/* <h4 className="serif text-xl font-semibold">Shagna di Shaam — Wedding Night</h4> */}
               <div className="text-sm text-[#007C77] mt-1">Tuesday, November 25, 2025 • Nikasi 6:15 PM</div>
               <p className="mt-3 text-[#4b4b4b]">An auspicious evening ceremony followed by a celebratory dinner.</p>
-            </motion.article>
+            {/* </motion.article> */}
           </motion.div>
         </div>
       </section>
