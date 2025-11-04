@@ -52,3 +52,14 @@ html { scroll-behavior: smooth; }
 .hover-shimmer:hover {
   animation: shimmer 1.5s ease-in-out infinite;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

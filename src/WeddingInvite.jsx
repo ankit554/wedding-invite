@@ -142,41 +142,35 @@ export default function WeddingInvite() {
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-        className="max-w-7xl mx-auto px-6 pt-12 pb-6 grid md:grid-cols-2 gap-8 items-center mt-16"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
       >
-        <div className="pl-6 md:pl-12">
-          <div className="text-md sans text-[#b9804a] font-semibold mb-8">You're Invited</div>
-          <h1 className="script text-6xl md:text-7xl leading-none text-[#3a2b2b]">Ankit &amp; Divya</h1>
-          <p className="mt-6 max-w-2xl sans text-lg text-[#5a5858]">With joy in our hearts, we invite you to join us for a beautiful two-day celebration of love and family. Please find the events, venue details and ways to share your photos below.</p>
+        {/* Left Section */}
+        <div className="px-2 sm:px-6 md:px-8 lg:px-12">
+          <div className="text-md sans text-[#b9804a] font-semibold mb-6 sm:mb-8">
+            You're Invited
+          </div>
 
-          <div className="flex gap-4 mt-8">
-            {/* <a href="#rsvp" className="inline-flex items-center gap-3 bg-gradient-to-r from-[#d81b60] to-[#ff7b6b] text-white px-6 py-3 rounded-lg shadow-lg hover:scale-[1.02] transition">
-              RSVP
-            </a> */}
-            {/* <a href="#details" className="inline-flex items-center gap-3 border border-slate-200 bg-white px-5 py-3 rounded-lg text-[#3b3b3b] shadow-sm">View Events</a> */}
+          <h1 className="script text-5xl sm:text-6xl md:text-7xl leading-tight text-[#3a2b2b]">
+            Ankit &amp; Divya
+          </h1>
 
-            {/* <button
-              // className="inline-flex items-center gap-3 bg-gradient-to-r from-[#d81b60] to-[#ff7b6b] text-white px-6 py-3 rounded-lg shadow-lg hover:scale-[1.02] transition"
-              onClick={() => document.getElementById("rsvp").smoothScrollTo('rsvp', 900)}
-              className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg shadow-md transition-all duration-300"
-            >
-              RSVP
-            </button>
-            <button className="inline-flex items-center gap-3 border border-slate-200 bg-white px-5 py-3 rounded-lg text-[#3b3b3b] shadow-sm" onClick={() => document.getElementById("details").smoothScrollTo('rsvp', 900)}>
-              Wedding Details
-            </button> */}
+          <p className="mt-6 max-w-2xl sans text-base sm:text-lg text-[#5a5858]">
+            With joy in our hearts, we invite you to join us for a beautiful two-day celebration of love and family. Please find the events, venue details and ways to share your photos below.
+          </p>
 
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4 mt-8">
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() =>
                 document.getElementById("rsvp")?.scrollIntoView({ behavior: "smooth" })
               }
-              // className="inline-flex items-center gap-3 bg-gradient-to-r from-[#d81b60] to-[#ff7b6b] text-white px-6 py-3 rounded-lg shadow-lg font-semibold cursor-pointer"
-              className="inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg shadow-md transition-all duration-300 cursor-pointer"
+              className="inline-flex items-center justify-center bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300 cursor-pointer"
             >
               RSVP
             </motion.a>
+
             <motion.a
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.98 }}
@@ -189,29 +183,37 @@ export default function WeddingInvite() {
             </motion.a>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl">
+          {/* Date & Venue */}
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg">
             <div>
               <div className="text-sm text-[#8b8b8b]">Date</div>
-              <div className="mt-1 serif text-base font-semibold">November 24 - 25, 2025</div>
+              <div className="mt-1 serif text-base font-semibold">
+                November 24 - 25, 2025
+              </div>
             </div>
             <div>
               <div className="text-sm text-[#8b8b8b]">Venue</div>
-              <div className="mt-1 serif text-base font-semibold">Agrasen Resort &amp; Hotel, Didwana</div>
+              <div className="mt-1 serif text-base font-semibold">
+                Agrasen Resort &amp; Hotel, Didwana
+              </div>
             </div>
           </div>
         </div>
 
+        {/* Right Section */}
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 1 }}
-          className="flex justify-center md:justify-end pr-6 md:pr-12"
+          className="flex justify-center md:justify-end w-full md:w-auto p-2 sm:p-4"
         >
-          <div className="bg-white rounded-3xl p-4 shadow-2xl w-80"  style={{ width: 370 }}>
-            {/* <img src="/images/MCL_5711.JPG" alt="couple" className="w-full h-72 object-cover rounded-xl" /> */}
-            <img src="/images/MCL_5388.JPG" alt="couple" className="w-full h-72 object-cover rounded-xl" />
+          <div className="bg-white rounded-3xl p-4 shadow-2xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm">
+            <img
+              src="/images/MCL_5388.JPG"
+              alt="couple"
+              className="w-full h-64 sm:h-72 object-cover rounded-xl"
+            />
             <div className="mt-3 flex items-center justify-between">
-              {/* <div className="sans font-semibold">Ankit &amp; Divya</div> */}
               <div className="font-semibold">Ankit &amp; Divya</div>
               <div className="text-sm text-[#b9804a]">Nov 24 • 25</div>
             </div>
@@ -220,7 +222,7 @@ export default function WeddingInvite() {
       </motion.header>
 
       {/* DETAILS */}
-      <section id="details" className="max-w-6xl mx-auto px-6 mt-20 pt-12">
+      <section id="details" className="max-w-6xl mx-auto px-6 mt-20 pt-8">
         <h2 className="section-title text-3xl serif">Wedding Events</h2>
         <div className="divider" />
         <p className="text-center sans text-[#6b6b6b] mt-4">We have planned meaningful ceremonies across two days — we hope you can celebrate with us.</p>
@@ -288,7 +290,7 @@ export default function WeddingInvite() {
       </section>
 
       {/* VENUE */}
-      <section id="venue" className="max-w-6xl mx-auto px-6 mt-20 pt-12">
+      <section id="venue" className="max-w-6xl mx-auto px-6 mt-20 pt-4">
         <h2 className="section-title text-3xl serif">Venue &amp; Location</h2>
         <div className="divider" />
         <div className="bg-white rounded-3xl shadow-lg mt-6 overflow-hidden p-6 grid md:grid-cols-2 gap-6 items-center">
@@ -340,13 +342,18 @@ export default function WeddingInvite() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }} className="mt-6 bg-gradient-to-r from-[#d81b60] to-[#ff7b6b] p-8 rounded-3xl text-white shadow-xl">
-            <form ref={formRef} onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
-              <input name="name" placeholder="Full name" className="p-3 rounded-lg text-slate-800" required />
-              <input name="phone" placeholder="WhatsApp Number [for important updates]" className="p-3 rounded-lg text-slate-800" />
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full"
+            >
+              <input name="name" placeholder="Full Name" className="p-3 rounded-lg text-slate-800" required />
+              <input name="phone" placeholder="WhatsApp number for updates" className="p-3 rounded-lg text-slate-800" />
               <input name="count" placeholder="Number of Adults" className="p-3 rounded-lg text-slate-800" />
               <input name="email" placeholder="Email (optional)" className="p-3 rounded-lg text-slate-800" />
               <select name="attend" className="p-3 rounded-lg text-slate-800">
-                <option value="" disabled selected hidden>Will you be able to join us for our special day? 💕</option>
+                {/* <option value="" disabled selected hidden>Will you be able to join us for our special day? 💕</option> */}
+                <option value="" disabled selected hidden>Will you celebrate with us? 💕</option>
                 <option value="yes">Yes, absolutely! 🎉</option>
                 <option value="no">Sorry, can't make it 😔</option>
                 <option value="maybe">Maybe, still figuring it out 🤔</option>
