@@ -214,7 +214,7 @@ export default function WeddingInvite() {
               className="w-full h-64 sm:h-72 object-cover rounded-xl"
             />
             <div className="mt-3 flex items-center justify-between">
-              <div className="font-semibold">Ankit &amp; Divya</div>
+              <div className="font-semibold">#AnD_That’s_Love</div>
               <div className="text-sm text-[#b9804a]">Nov 24 • 25</div>
             </div>
           </div>
