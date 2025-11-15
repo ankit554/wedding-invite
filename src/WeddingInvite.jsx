@@ -150,7 +150,8 @@ export default function WeddingInvite() {
             You're Invited
           </div>
 
-          <h1 className="script text-5xl sm:text-6xl md:text-7xl leading-tight text-[#3a2b2b]">
+          {/* Replcaed "script" class with "wedding-font" */}
+          <h1 className="wedding-font text-5xl sm:text-6xl md:text-7xl leading-tight text-[#3a2b2b]">
             Ankit &amp; Divya
           </h1>
 
@@ -209,7 +210,7 @@ export default function WeddingInvite() {
         >
           <div className="bg-white rounded-3xl p-4 shadow-2xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm">
             <img
-              src="/images/MCL_5388.JPG"
+              src="https://rna8l7ivrxvxruz3.public.blob.vercel-storage.com/MCL_5388.JPG"
               alt="couple"
               className="w-full h-64 sm:h-72 object-cover rounded-xl"
             />
@@ -315,7 +316,8 @@ export default function WeddingInvite() {
 
         <div className="masonry mt-8">
           {["DSC08009.JPG","MCL_5711.JPG","DSC07925.JPG","MCL_5388.JPG","MCL_5189.JPG"].map((img, i) => (
-            <img key={i} src={`/images/${img}`} alt={`gallery-${i}`} />
+            <img key={i} src={`https://rna8l7ivrxvxruz3.public.blob.vercel-storage.com/${img}`} alt={`gallery-${i}`} />
+            // <img key={i} src={`/images/${img}`} alt={`gallery-${i}`} />
           ))}
         </div>
       </section>
